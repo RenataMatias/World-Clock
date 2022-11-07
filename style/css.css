@@ -1,5 +1,5 @@
 body {
-  background: rgb(251, 232, 226);
+  background: rgb(177, 203, 194);
   font-family: sans-serif;
 }
 .container {
@@ -25,6 +25,7 @@ select {
   border-radius: 5px;
   font-size: 18px;
   border: 1px solid rgba(0, 0, 0, 0.4);
+  background: rgba(177, 203, 194, 0.3);
 }
 .cities {
   display: flex;
