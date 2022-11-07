@@ -58,7 +58,8 @@ function searchCity(event) {
           <div class="time">${citySelectedTimeZone.format(
             "hh:mm:ss [<small>]A[</small>]"
           )}</div>
-        </div>`;
+        </div>
+        <a href="/">All cities</a>`;
   }
 }
 
