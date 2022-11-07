@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/style/css.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.38/moment-timezone-with-data-1970-2030.js"></script>
     <title>World Clock</title>
   </head>
   <body>
@@ -14,22 +16,30 @@
         <option value="">Select a city...</option>
         <option value="new-york">New York 🇺🇸</option>
         <option value="london">London 🇬🇧</option>
-        <option value="sydney">Sydney 🇦🇺</option>
+        <option value="rome">Rome 🇮🇹</option>
+        <!-- <option value="sydney">Sydney 🇦🇺</option> -->
       </select>
 
-      <div class="cities">
+      <div class="cities" id="paris">
         <div>
           <h2>Paris 🇫🇷</h2>
-          <div class="date">November 6th 2022</div>
+          <div class="date"></div>
         </div>
-        <div class="time">1:45:15 <small>AM</small></div>
+        <div class="time"></div>
       </div>
-      <div class="cities">
+      <div class="cities" id="tokyo">
         <div>
-          <h2>Rome 🇮🇹</h2>
-          <div class="date">November 6th 2022</div>
+          <h2>Tokyo 🇯🇵</h2>
+          <div class="date"></div>
         </div>
-        <div class="time">1:45:15 <small>AM</small></div>
+        <div class="time"></div>
+      </div>
+      <div class="cities" id="sydney">
+        <div>
+          <h2>Sydney 🇦🇺</h2>
+          <div class="date"></div>
+        </div>
+        <div class="time"></div>
       </div>
     </div>
     <footer>
