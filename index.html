@@ -7,27 +7,33 @@
     <link href="/style/css.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.38/moment-timezone-with-data-1970-2030.js"></script>
+    <script
+      src="https://kit.fontawesome.com/b43b33e463.js"
+      crossorigin="anonymous"
+    ></script>
     <title>World Clock</title>
   </head>
   <body>
     <div class="container">
       <h1>World Clock 🕰️</h1>
-      <select class="citiesSelect">
-        <option value="">Select a city...</option>
-        <option value="current">My current location</option>
-        <option value="America/New_York">New York</option>
-        <option value="America/Toronto">Toronto</option>
-        <option value="Europe/London">London</option>
-        <option value="Europe/Rome">Rome</option>
-        <option value="Europe/Lisbon">Lisbon</option>
-        <option value="Europe/Madrid">Madrid</option>
-        <option value="Europe/Oslo">Oslo</option>
-        <option value="Europe/Stockholm">Stockholm</option>
-        <option value="Asia/Singapore">Singapore</option>
-        <option value="Asia/Shanghai">Shanghai</option>
-        <option value="America/Santiago">Santiago</option>
-      </select>
-
+      <div class="grid">
+        <select class="citiesSelect">
+          <option value="">Select a city...</option>
+          <option value="current">My current location</option>
+          <option value="America/New_York">New York</option>
+          <option value="America/Toronto">Toronto</option>
+          <option value="Europe/London">London</option>
+          <option value="Europe/Rome">Rome</option>
+          <option value="Europe/Lisbon">Lisbon</option>
+          <option value="Europe/Madrid">Madrid</option>
+          <option value="Europe/Oslo">Oslo</option>
+          <option value="Europe/Stockholm">Stockholm</option>
+          <option value="Asia/Singapore">Singapore</option>
+          <option value="Asia/Shanghai">Shanghai</option>
+          <option value="America/Santiago">Santiago</option>
+        </select>
+        <button><i class="fa-solid fa-location-dot"></i></button>
+      </div>
       <div class="displayCity">
         <div class="cities" id="paris">
           <div>

@@ -39,15 +39,10 @@ function updateTime() {
   }
 }
 
-function searchCity(event) {
-  let citySelected = event.target.value;
-  if (citySelected.length > 0) {
-    if (citySelected === "current") {
-      citySelected = moment.tz.guess();
-    }
-    let citySelectedName = citySelected.replace("_", " ").split("/")[1];
-    let citySelectedTimeZone = moment().tz(citySelected);
-    displayCityElement.innerHTML = `
+function SelectCity(citySelected) {
+  let citySelectedName = citySelected.replace("_", " ").split("/")[1];
+  let citySelectedTimeZone = moment().tz(citySelected);
+  displayCityElement.innerHTML = `
         <div class="cities">
           <div>
             <h2>${citySelectedName}</h2>
@@ -60,7 +55,18 @@ function searchCity(event) {
           )}</div>
         </div>
         <a href="/">All cities</a>`;
+}
+
+function searchCity(event) {
+  if (event.target.value.length > 0) {
+    let citySelected = event.target.value;
+    SelectCity(citySelected);
   }
+}
+
+function CurrentLocation() {
+  let citySelected = moment.tz.guess();
+  SelectCity(citySelected);
 }
 
 let displayCityElement = document.querySelector(".displayCity");
@@ -68,3 +74,6 @@ let searchCityElement = document.querySelector(".citiesSelect");
 searchCityElement.addEventListener("change", searchCity);
 
 setInterval(updateTime, 1000);
+
+let buttonSelect = document.querySelector("button");
+buttonSelect.addEventListener("click", CurrentLocation);
