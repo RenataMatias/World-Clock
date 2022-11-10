@@ -50,9 +50,9 @@ function SelectCity(citySelected) {
               "Do MMMM YYYY"
             )}</div>
           </div>
-          <div class="time">${setInterval(function () {
-            citySelectedTimeZone.format("hh:mm:ss [<small>]A[</small>]");
-          }, 1000)}</div>
+          <div class="time">${citySelectedTimeZone.format(
+            "hh:mm:ss [<small>]A[</small>]"
+          )}</div>
         </div>
         <a href="/">All cities</a>`;
 }
