@@ -40,9 +40,12 @@ function updateTime() {
 }
 
 function SelectCity(citySelected) {
-  let citySelectedName = citySelected.replace("_", " ").split("/")[1];
-  let citySelectedTimeZone = moment().tz(citySelected);
-  displayCityElement.innerHTML = `
+  clearInterval(intervalID);
+
+  intervalID = setInterval(function () {
+    let citySelectedName = citySelected.replace("_", " ").split("/")[1];
+    let citySelectedTimeZone = moment().tz(citySelected);
+    displayCityElement.innerHTML = `
         <div class="cities">
           <div>
             <h2>${citySelectedName}</h2>
@@ -55,6 +58,7 @@ function SelectCity(citySelected) {
           )}</div>
         </div>
         <a href="/">All cities</a>`;
+  }, 1000);
 }
 
 function searchCity(event) {
@@ -68,6 +72,8 @@ function CurrentLocation() {
   let citySelected = moment.tz.guess();
   SelectCity(citySelected);
 }
+
+let intervalID = 0;
 
 let displayCityElement = document.querySelector(".displayCity");
 let searchCityElement = document.querySelector(".citiesSelect");
