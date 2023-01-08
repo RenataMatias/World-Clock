@@ -25,7 +25,7 @@ function updateTime() {
     );
   }
 
-  //Rome:
+  //Sydney:
   let sydneyElement = document.querySelector("#sydney");
   if (sydneyElement) {
     let sydneyDateElement = document.querySelector("#sydney .date");
